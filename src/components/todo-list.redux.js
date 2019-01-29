@@ -1,7 +1,8 @@
 import React from "react";
+import Todo from "./todo";
+
 import { connect } from "react-redux";
 
-import Todo from "./todo";
 import { toggleTodo as _toggleTodo } from "../redux/actions";
 
 const TodoList = ({ todos, toggleTodo }) => (
@@ -12,7 +13,11 @@ const TodoList = ({ todos, toggleTodo }) => (
   </ul>
 );
 
+const mapStateToProps = state => ({
+  todos: state.todos
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   { toggleTodo: _toggleTodo }
 )(TodoList);

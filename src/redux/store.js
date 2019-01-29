@@ -1,4 +1,9 @@
-import { createStore } from "redux";
-import rootReducer from "./reducers";
+import { createStore, combineReducers } from "redux";
+
+import todos from "./reducers";
+
+const rootReducer = combineReducers({
+  todos
+});
 
 export default createStore(rootReducer);

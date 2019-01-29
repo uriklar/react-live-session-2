@@ -5,11 +5,6 @@ export const addTodo = text => ({
   text
 });
 
-export const setVisibilityFilter = filter => ({
-  type: types.SET_VISIBILITY_FILTER,
-  filter
-});
-
 export const toggleTodo = id => ({
   type: types.TOGGLE_TODO,
   id
